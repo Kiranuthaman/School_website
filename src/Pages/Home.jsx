@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-black fixed-top" variant="dark">
+      <Navbar expand="lg" className="bg-success fixed-top" variant="">
         <Container>
           <Navbar.Brand href="#home" className="text-light">
             <img
@@ -54,7 +54,7 @@ function Home() {
                 Contact Us
               </Nav.Link>
               <Link to={'./login'}>
-              <Button variant="primary" className="ms-2">
+              <Button variant="warning" className="ms-2">
                 Student Login
               </Button>
               </Link>
@@ -142,7 +142,7 @@ function Home() {
       </Container>
       {/* welcome */}
 
-      <div className="container-fluid mt-5 bg-dark">
+      <div className="container-fluid mt-5 bg-success">
         <div className="row mt-5">
           <div className="col-md-1"></div>
           <div className="col-md-6 mt-5" data-aos="fade-left">
@@ -153,7 +153,7 @@ function Home() {
           </div>
           <div className="col-md-4 p-3 mb-2" data-aos="fade-right">
             <img
-              src="https://www.research-in-germany.org/dam/jcr:1e10a168-41cc-4655-8923-86da01270076/school_iStock-1358014313.jpg"
+              src="https://media.istockphoto.com/id/1409722748/photo/students-raising-hands-while-teacher-asking-them-questions-in-classroom.jpg?s=612x612&w=0&k=20&c=NbVChOV9wIbQOhUD6BqpouZHHBbyQ2rkSjaVfIhpMv8="
               className="w-100 rounded mt-3"
               alt="School"
             />
@@ -244,20 +244,20 @@ function Home() {
       </div>
 
       {/* footer */}
-      <div className="bg-dark w-full container-fluid" >
+      <div className="bg-success w-full container-fluid"  >
         <div className="row p-3">
-            <div className="col-md-6 mt-4">
+            <div className="col-md-6 mt-4 " data-aos="fade-left">
                 <h4 className='text-white'>Modern English Medium School</h4>
                 <p className=' d-flex text-align-justify' style={{textAlign:'justify'}} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo incidunt sunt fuga earum excepturi officiis iure, voluptates, laborum accusamus doloremque obcaecati consequatur saepe repellat eveniet. Placeat, neque hic? Nesciunt.</p>
             </div>
-            <div className="col-md-2 mt-4">
+            <div className="col-md-2 mt-4"data-aos="fade-down">
             <h4 className='text-white'>Links</h4>
             <p>React</p>
             <p>React Bootsrsp</p>
             <p>Bootsawtch</p>
 
             </div>
-            <div className="col-md-4 mt-4">
+            <div className="col-md-4 mt-4 " data-aos="fade-right">
             <h4 className='text-white'>Contact</h4>
             <div className='d-flex'>
             <input type="text" placeholder='Enter Email' className='form-control' />
