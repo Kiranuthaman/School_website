@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
 import { Link } from 'react-router-dom';
+import { getStudentApi } from '../services/allApi';
 
 
 const Login = () => {
- 
 
 
   return (
