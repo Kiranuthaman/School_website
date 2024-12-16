@@ -9,13 +9,10 @@ const Login = () => {
 
 
   return (
-<<<<<<< HEAD
+
     <div className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
-=======
-    <div>login</div>
-  )
-}
->>>>>>> anupama
+
+   
 
       <div className="card p-4 shadow-lg" style={{ maxWidth: '400px', width: '100%' }}>
         <form >

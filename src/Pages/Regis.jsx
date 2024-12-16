@@ -30,8 +30,8 @@ function Regis() {
     
 
   <div className='d-flex align-items-center justify-content-center vh-100'>
-  <div className="register-container text-center bg-light p-5 rounded shadow">
-    <h1 className="mb-4">Student Registration</h1>
+  <div className="register-container text-center bg-light p-5 rounded shadow-lg">
+    <h1 className="mb-4 text-success">Student Registration</h1>
     <form onSubmit={handleSubmit} className="register-form">
       <div className="mb-3">
         {/* <label className="form-label">Name:</label> */}
@@ -57,8 +57,8 @@ function Regis() {
           required
         />
       </div>
-      <button type="submit" className="btn btn-secondary w-100">Register</button>
-      <Link to={'/'}><p>login</p></Link>
+      <button type="submit" className="btn btn-success w-100">Register</button>
+      <p><Link className='text-success' to={'/login'}><p>login</p></Link></p>
     </form>
   </div>
 </div>
