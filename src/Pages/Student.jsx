@@ -7,7 +7,7 @@ function Student() {
   return (
     <>
     <Header/>
-    <div>Student</div>
+    <div style={{marginTop:'130px'}}>hello world</div>
     <Footer/>
     </>
     
