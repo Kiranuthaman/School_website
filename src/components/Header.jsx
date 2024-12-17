@@ -8,14 +8,10 @@ function Header() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Clear any session or local storage data (if used)
-    localStorage.removeItem('user');  // Remove user data from localStorage (or sessionStorage)
-    
-    // If using context or state management, you can reset that here as well.
-    // For example: dispatch(logoutAction());
-
-    // Redirect to the login page
-    navigate('/login');
+   
+    localStorage.removeItem('user'); 
+   
+    navigate('/');
   };
 
   return (

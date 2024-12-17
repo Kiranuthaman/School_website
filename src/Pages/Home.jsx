@@ -13,7 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faHandHoldingHand, faRocket, faShield } from '@fortawesome/free-solid-svg-icons';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-
+import Lottie from 'lottie-react';
+import Animation from '../assets/Animation - 1734462611337.json'
 function Home() {
   useEffect(() => {
     AOS.init({
@@ -54,11 +55,11 @@ function Home() {
                 Contact Us
               </Nav.Link>
               <Link to={'./login'}>
-              <Button variant="warning" className="ms-2">
-                Student Login
-              </Button>
+                <Button variant="warning" className="ms-2">
+                  Student Login
+                </Button>
               </Link>
-              
+
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -72,14 +73,29 @@ function Home() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           marginTop: '80px',
+          
         }}
         data-aos="fade-up"
       >
-        <div>
+        <div className='mt-5'>
           <h2 className="text-light">Modern English Medium School</h2>
-          <Button variant="warning" className="ms-2" data-aos="zoom-in">
+          <Button variant="warning" className="ms-2 mt-2" data-aos="zoom-in">
             Please Scroll Down
           </Button>
+          <div className='mt-3'  data-aos="fade-up"
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: '50px', // adjust height as needed
+            }}
+          >
+            <Lottie
+              animationData={Animation}
+              style={{ width: '100px', height: '100px' }} // adjust width and height here
+            />
+          </div>
+
         </div>
       </div>
 
@@ -181,19 +197,19 @@ function Home() {
           </div>
           <div className="col-md-4 mt-2" data-aos="zoom-in" data-aos-delay="200">
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMnIIEmUzf9e_pCCnnqw2_JuM_IjaFyoJ_B4w4sn8YWSaIot4cve-47plfnh3FOGFueQj2Czq92Be5woFredTzHMN8vsK-G4I4qxCpFdBWin_qhZ7zws4EcyEtZ78SrGA7HhF-hYv459gwQov672UxiOet1Px5ByYA8QAcEA3AkGFJ4vNjJnk9XMRfLq9a/w365-h200-p-k-no-nu/drbejoythomas.jpg"  className='w-100' />
+              <Card.Img variant="top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMnIIEmUzf9e_pCCnnqw2_JuM_IjaFyoJ_B4w4sn8YWSaIot4cve-47plfnh3FOGFueQj2Czq92Be5woFredTzHMN8vsK-G4I4qxCpFdBWin_qhZ7zws4EcyEtZ78SrGA7HhF-hYv459gwQov672UxiOet1Px5ByYA8QAcEA3AkGFJ4vNjJnk9XMRfLq9a/w365-h200-p-k-no-nu/drbejoythomas.jpg" className='w-100' />
               <Card.Body>
                 <Card.Title>Meet the leaders ep2 2023</Card.Title>
                 <Card.Text>
-                 \Lorem ipsum dolor sit amet consectetur. Lorem, ipsum. Lorem ipsum dolor sit amet.
+                  \Lorem ipsum dolor sit amet consectetur. Lorem, ipsum. Lorem ipsum dolor sit amet.
                 </Card.Text>
-               
+
               </Card.Body>
             </Card>
           </div>
           <div className="col-md-4 mt-2" data-aos="zoom-in" data-aos-delay="400">
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTBelmnz064DQrQ6AVWwgQDN2FXSWG1_nSdpWDqDvAuHquIDaSkmMwJCm7XT4E0raflSxw_wMP4Z7CxLLytFybA9KSUu_H_r3eniQ7Wju1FmMtbiQGurKZ3ai_t8-2TqIM3kTwNNICjzV9x0ybIveXy5txT6K3OXijY0gidX2gnA0NKLGUiWxxHcLBs1aG/w365-h200-p-k-no-nu/1.jpg"  className='w-100' />
+              <Card.Img variant="top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTBelmnz064DQrQ6AVWwgQDN2FXSWG1_nSdpWDqDvAuHquIDaSkmMwJCm7XT4E0raflSxw_wMP4Z7CxLLytFybA9KSUu_H_r3eniQ7Wju1FmMtbiQGurKZ3ai_t8-2TqIM3kTwNNICjzV9x0ybIveXy5txT6K3OXijY0gidX2gnA0NKLGUiWxxHcLBs1aG/w365-h200-p-k-no-nu/1.jpg" className='w-100' />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
@@ -211,26 +227,26 @@ function Home() {
               <Card.Body>
                 <Card.Title>GK REVIEW, Issue 3 December 2023 - Monthly GK Update Newsletter by Quiz Club</Card.Title>
                 <Card.Text>
-                  
+
                 </Card.Text>
               </Card.Body>
             </Card>
           </div>
           <div className="col-md-4 mt-2" data-aos="zoom-in" data-aos-delay="200">
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrkXrYWvAejPOdOJJ_zz2kiQ_IX6gDUjP9FEK6LDg4vmytMiNnc0hdUD2btfnLsQLooNkyiU6Hp9nZ7FegAKLYnH9aBItdZNtFxLNhxnKc-gMRqXZ6AgRqh9KyQkkj3SywtssAdC1tRBvVc-6ArYiGkHoVjJU9YOmtnoaB6hpHZ_G-E16AA2E5CWDhxffO/w365-h200-p-k-no-nu/alumnimeet.jpg"  className='w-100' />
+              <Card.Img variant="top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrkXrYWvAejPOdOJJ_zz2kiQ_IX6gDUjP9FEK6LDg4vmytMiNnc0hdUD2btfnLsQLooNkyiU6Hp9nZ7FegAKLYnH9aBItdZNtFxLNhxnKc-gMRqXZ6AgRqh9KyQkkj3SywtssAdC1tRBvVc-6ArYiGkHoVjJU9YOmtnoaB6hpHZ_G-E16AA2E5CWDhxffO/w365-h200-p-k-no-nu/alumnimeet.jpg" className='w-100' />
               <Card.Body>
                 <Card.Title>Silver Jubilee Alumni Meet 30 December 2023</Card.Title>
                 <Card.Text>
-                 \Lorem ipsum dolor sit amet consectetur.
+                  \Lorem ipsum dolor sit amet consectetur.
                 </Card.Text>
-               
+
               </Card.Body>
             </Card>
           </div>
           <div className="col-md-4 mt-2" data-aos="zoom-in" data-aos-delay="400">
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTBelmnz064DQrQ6AVWwgQDN2FXSWG1_nSdpWDqDvAuHquIDaSkmMwJCm7XT4E0raflSxw_wMP4Z7CxLLytFybA9KSUu_H_r3eniQ7Wju1FmMtbiQGurKZ3ai_t8-2TqIM3kTwNNICjzV9x0ybIveXy5txT6K3OXijY0gidX2gnA0NKLGUiWxxHcLBs1aG/w365-h200-p-k-no-nu/1.jpg"  className='w-100' />
+              <Card.Img variant="top" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTBelmnz064DQrQ6AVWwgQDN2FXSWG1_nSdpWDqDvAuHquIDaSkmMwJCm7XT4E0raflSxw_wMP4Z7CxLLytFybA9KSUu_H_r3eniQ7Wju1FmMtbiQGurKZ3ai_t8-2TqIM3kTwNNICjzV9x0ybIveXy5txT6K3OXijY0gidX2gnA0NKLGUiWxxHcLBs1aG/w365-h200-p-k-no-nu/1.jpg" className='w-100' />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
@@ -246,30 +262,30 @@ function Home() {
       {/* footer */}
       <div className="bg-success w-full container-fluid"  >
         <div className="row p-3">
-            <div className="col-md-6 mt-4 " data-aos="fade-left">
-                <h4 className='text-white'>Modern English Medium School</h4>
-                <p className=' d-flex text-align-justify' style={{textAlign:'justify'}} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo incidunt sunt fuga earum excepturi officiis iure, voluptates, laborum accusamus doloremque obcaecati consequatur saepe repellat eveniet. Placeat, neque hic? Nesciunt.</p>
-            </div>
-            <div className="col-md-2 mt-4"data-aos="fade-down">
+          <div className="col-md-6 mt-4 " data-aos="fade-left">
+            <h4 className='text-white'>Modern English Medium School</h4>
+            <p className=' d-flex text-align-justify' style={{ textAlign: 'justify' }} >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo incidunt sunt fuga earum excepturi officiis iure, voluptates, laborum accusamus doloremque obcaecati consequatur saepe repellat eveniet. Placeat, neque hic? Nesciunt.</p>
+          </div>
+          <div className="col-md-2 mt-4" data-aos="fade-down">
             <h4 className='text-white'>Links</h4>
             <p>React</p>
             <p>React Bootsrsp</p>
             <p>Bootsawtch</p>
 
-            </div>
-            <div className="col-md-4 mt-4 " data-aos="fade-right">
+          </div>
+          <div className="col-md-4 mt-4 " data-aos="fade-right">
             <h4 className='text-white'>Contact</h4>
             <div className='d-flex'>
-            <input type="text" placeholder='Enter Email' className='form-control' />
-            <button className='btn btn-warning ms-1'>Subscribe</button>
+              <input type="text" placeholder='Enter Email' className='form-control' />
+              <button className='btn btn-warning ms-1'>Subscribe</button>
             </div>
-           
+
             <div className='d-flex justify-content-between'>
-            
+
             </div>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     </>
   );

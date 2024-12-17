@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className="container-fluid text-white mt-5 w-full " style={{backgroundColor:'rgb(200,200,200)' }}>
+    <footer className="container-fluid text-white mt-5 w-full bg-success " style={{backgroundColor:'rgb(200,200,200)' }}>
     <div className="container-fluid p-4 w-full">
       <div className="row">
         {/* School Name */}
@@ -12,7 +12,7 @@ function Footer() {
         </div>
 
         {/* Navigation Links */}
-        <div className="col-md-4 mb-3">
+        <div className="col-md-4 mb-3 ">
           <h5 className="text-uppercase text-dark">Navigation</h5>
           <ul className="list-unstyled">
             <li><a href="/" className="text-white text-decoration-none">Home</a></li>
@@ -32,7 +32,7 @@ function Footer() {
     </div>
 
     {/* Footer Bottom */}
-    <div className="bg-secondary text-center py-2">
+    <div className="bg-warning text-center py-2">
       <p className="mb-0">&copy; {new Date().getFullYear()} ABC High School. All Rights Reserved.</p>
     </div>
   </footer>
