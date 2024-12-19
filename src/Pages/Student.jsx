@@ -23,15 +23,26 @@ function StudentDashboard() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Fetch student data on initial render
+  // Fetch student data based on localStorage (name & admissionNumber)
   useEffect(() => {
     const fetchStudentData = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/Details/1');
-        setStudentData(response.data);
-      } catch (error) {
-        console.error('Error fetching student data', error);
-        setError('Failed to load student data.');
+      const storedName = localStorage.getItem('name');
+      const storedAdmission = localStorage.getItem('admissionNumber');
+
+      if (storedName && storedAdmission) {
+        try {
+          // Fetch student data using name and admission number
+          const response = await axios.get(`http://localhost:4000/Details?name=${storedName}&admission=${storedAdmission}`);
+          
+          if (response.data && response.data.length > 0) {
+            setStudentData(response.data[0]); // Assuming the response is an array with the student data
+          } else {
+            setStudentData(null); // If no data found, set to null to show "Add Student Details"
+          }
+        } catch (error) {
+          console.error('Error fetching student data', error);
+          setError('Failed to load student data.');
+        }
       }
     };
 
@@ -95,20 +106,7 @@ function StudentDashboard() {
     }
   };
 
-  // Handle delete button
-  const handleDelete = async () => {
-    try {
-      if (studentData && studentData.id) {
-        await axios.delete(`http://localhost:4000/Details/${studentData.id}`);
-        console.log('Student data deleted successfully');
-        setStudentData(null);
-      }
-      setShowDeleteModal(false);
-    } catch (error) {
-      console.error('Error deleting data', error);
-      setError('Failed to delete data.');
-    }
-  };
+
 
   // Handle delete confirmation modal
   const handleShowDeleteModal = () => setShowDeleteModal(true);
@@ -134,7 +132,7 @@ function StudentDashboard() {
                     <p><strong>Admission Number:</strong> {studentData.admission}</p>
                   </CardText>
                   <button className="btn btn-warning" onClick={handleEdit}>Edit</button>
-                  <button className="btn btn-danger ms-2" onClick={handleShowDeleteModal}>Delete</button>
+                 
                 </CardBody>
               </Card>
             </div>
@@ -248,19 +246,6 @@ function StudentDashboard() {
         </Modal.Footer>
       </Modal>
 
-      {/* Modal for Delete Confirmation */}
-      <Modal show={showDeleteModal} onHide={handleCloseDeleteModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Confirm Deletion</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Are you sure you want to delete this student record?
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseDeleteModal}>Cancel</Button>
-          <Button variant="danger" onClick={handleDelete}>Delete</Button>
-        </Modal.Footer>
-      </Modal>
 
       <Footer />
     </>

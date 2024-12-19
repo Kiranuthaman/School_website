@@ -15,6 +15,11 @@ const Login = () => {
 
     // Special case: predefined admin login
     if (name === 'argo' && admissionNumber === '1234') {
+      // Store admin login data to localStorage
+      localStorage.setItem('userRole', 'admin');
+      localStorage.setItem('name', 'argo');
+      localStorage.setItem('admissionNumber', '1234');
+      
       navigate('/admin'); // Navigate to the admin dashboard
       alert('Welcome, Admin!');
       return;
@@ -29,6 +34,11 @@ const Login = () => {
         );
 
         if (student) {
+          // Store student login data to localStorage
+          localStorage.setItem('userRole', 'student');
+          localStorage.setItem('name', student.name);
+          localStorage.setItem('admissionNumber', student.admissionNumber);
+
           navigate('/student'); // Navigate to the student dashboard
           alert('Login Successfully');
         } else {
@@ -49,53 +59,69 @@ const Login = () => {
   };
 
   return (
-   <>
-   <div className="container-fluid">
-    <div className="row ">
-      <div className="col-md-6   d-flex justify-content-center align-items-center">
-        <img className='rounded' src="https://media2.giphy.com/media/WRirZDh1EYZl31NcK2/giphy.gif?cid=6c09b952gnhr0vltw1uc48foyxj70wncldkd8dlb7tq3pk6q&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"  alt="" />
-      </div>
-      <div className="col-md-6">
-      <div className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
-      <div className="card p-4 shadow-lg" style={{ maxWidth: '400px', width: '100%' }}>
-        <form onSubmit={handleLogin}>
-          <h1 className="text-center text-success mb-4">Login</h1>
-          {error && <div className="alert alert-danger">{error}</div>}
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label">Name</label>
-            <input
-              type="text"
-              id="name"
-              className="form-control"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
+    <>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-6 d-flex justify-content-center align-items-center">
+            <img
+              className="rounded"
+              src="https://media2.giphy.com/media/WRirZDh1EYZl31NcK2/giphy.gif?cid=6c09b952gnhr0vltw1uc48foyxj70wncldkd8dlb7tq3pk6q&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"
+              alt=""
             />
           </div>
-          <div className="mb-3">
-            <label htmlFor="admissionNumber" className="form-label">Admission Number</label>
-            <input
-              type="text"
-              id="admissionNumber"
-              className="form-control"
-              value={admissionNumber}
-              onChange={(e) => setAdmissionNumber(e.target.value)}
-              required
-            />
+          <div className="col-md-6">
+            <div className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+              <div
+                className="card p-4 shadow-lg"
+                style={{ maxWidth: '400px', width: '100%' }}
+              >
+                <form onSubmit={handleLogin}>
+                  <h1 className="text-center text-success mb-4">Login</h1>
+                  {error && <div className="alert alert-danger">{error}</div>}
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="form-control"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="admissionNumber" className="form-label">
+                      Admission Number
+                    </label>
+                    <input
+                      type="text"
+                      id="admissionNumber"
+                      className="form-control"
+                      value={admissionNumber}
+                      onChange={(e) => setAdmissionNumber(e.target.value)}
+                      required
+                    />
+                  </div>
+                  <button type="submit" className="btn btn-success w-100">
+                    Login
+                  </button>
+                  <div className="text-center mt-3">
+                    <p>
+                      Don't have an account?{' '}
+                      <Link className="text-warning" to={'/registration'}>
+                        Register
+                      </Link>
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <button type="submit" className="btn btn-success w-100">Login</button>
-          <div className="text-center mt-3">
-            <p>
-              Don't have an account? <Link className="text-warning" to={'/registration'}>Register</Link>
-            </p>
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
-      </div>
-    </div>
-   </div>
-   </>
+    </>
   );
 };
 

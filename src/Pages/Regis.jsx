@@ -6,7 +6,7 @@ import { serverUrl } from '../services/serverURL';
 
 function Regis() {
 
-  const [student, setStudent] = useState({ name: '', admissionNumber: '' });
+  const [student, setStudent] = useState({ name: '', admissionNumber: '', Details :'' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
