@@ -1,0 +1,136 @@
+/* HomeComponent.css */
+
+/* General Reset */
+body, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.app-header {
+  background-color: #1a1343 !important;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.data-section {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.data-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #6a5acd;
+}
+
+.data-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.data-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.data-item p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.id-proof {
+  margin-top: 20px;
+}
+
+.id-proof h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #6a5acd;
+}
+
+.id-proof-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .data-item {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  .profile-image {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 900px) {
+  .app-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .data-section {
+    padding: 40px;
+  }
+
+  .id-proof-image {
+    max-width: 400px;
+  }
+}

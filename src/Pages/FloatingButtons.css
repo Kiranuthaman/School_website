@@ -1,0 +1,30 @@
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .floating-icon {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background: #25D366;
+    color: #ffffff; /* WhatsApp green color */
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .floating-icon:hover {
+    color: #128C7E; /* Darker green on hover */
+  }
+  
+  .si-googleclassroom {
+    color: #34A853; /* Google Classroom green color */
+  }
+  
+  .si-googleclassroom:hover {
+    color: #1A73E8; /* Darker blue on hover */
+  }  
